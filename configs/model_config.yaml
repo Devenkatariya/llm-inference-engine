@@ -1,0 +1,25 @@
+model:
+  name: "microsoft/Phi-3-mini-4k-instruct"
+  precision: "fp16"        # fp32 | fp16 | bf16 | int8 | int4
+  max_new_tokens: 512
+  max_seq_length: 4096
+  trust_remote_code: true
+  cache_dir: null          # Set to /kaggle/working/models on Kaggle
+
+quantization:
+  enabled: false
+  method: "bitsandbytes"   # bitsandbytes | gptq
+  bits: 8
+  double_quant: true
+  quant_type: "nf4"
+
+cache:
+  type: "dynamic"          # static | dynamic
+  max_cache_len: 2048
+
+generation:
+  temperature: 0.7
+  top_p: 0.9
+  top_k: 50
+  do_sample: true
+  repetition_penalty: 1.1
