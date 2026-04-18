@@ -24,7 +24,7 @@ setup(
         "tqdm>=4.66.0",
     ],
     extras_require={
-        "quantization": ["bitsandbytes>=0.43.0", "auto-gptq>=0.7.1", "optimum>=1.19.0"],
+        "quantization": ["bitsandbytes>=0.43.0", "optimum>=1.19.0"],
         "dev": ["pytest>=8.1.0", "black>=24.3.0", "flake8>=7.0.0"],
     },
     classifiers=[
